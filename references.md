@@ -22,32 +22,12 @@ Article - 2015 - **[An in-depth look into the ARM virtualization extensions](htt
 
 
 Series - 2008 - **[Hardware Virtualization: the Nuts and Bolts](https://www.anandtech.com/show/2480/10)** - Explains the impact of x86 hardware virtualization performance. Topics include:
-
-> A Matter of Privileges
-> Virtualization Challenges
-> Binary Translation
-> System Calls
-> I/O Virtualization
-> Memory Management
-> Paravirtualization
-> Intel VT-x and AMD SVM
-> Intel's EPT and AMD's NPT
-> Standardization Please!
-> The Benchmarks
-> Conclusion and Bibliography
+> A Matter of Privileges, Virtualization Challenges, Binary Translation, System Calls, I/O Virtualization, Memory ManagementParavirtualization, Intel VT-x and AMD SVM, Intel's EPT and AMD's NPT, Standardization Please!, The Benchmarks, Conclusion and Bibliography, 
 
 
 
 Series/Code - Updating - **[Hypervisor-From-Scratch](https://github.com/SinaKarvandi/Hypervisor-From-Scratch)** - Course contains technical details to create a basic Virtual Machine based on x86 hardware virtualization.. Topics include:
-
-> Basic Concepts & Configure Testing Environment
-> Entering VMX Operation
-> Setting up Our First Virtual Machine
-> Address Translation Using Extended Page Table (EPT)
-> Setting up VMCS & Running Guest Code
-> Virtualizing An Already Running System
-> Using EPT & Page-Level Monitoring Features
-> How To Do Magic With Hypervisor!
+> Basic Concepts & Configure Testing Environment, Entering VMX Operation, Setting up Our First Virtual Machine, Address Translation Using Extended Page Table (EPT), Setting up VMCS & Running Guest Code, Virtualizing An Already Running System, Using EPT & Page-Level Monitoring Features, How To Do Magic With Hypervisor!
 
 
 
