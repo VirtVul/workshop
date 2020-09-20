@@ -23,6 +23,10 @@ Article - 2015 - **[An in-depth look into the ARM virtualization extensions](htt
 
 Doc - Updating - **[Intel® 64 and IA-32 Architectures Software Developer's Manual Volume 3C: System Programming Guide, Part 3](https://software.intel.com/content/www/us/en/develop/download/intel-64-and-ia-32-architectures-sdm-volume-3c-system-programming-guide-part-3.html)** - Volume 3C covers system management mode, virtual machine extensions (VMX) instructions, and Intel® Virtualization Technology (Intel® VT).
 
+Doc - Updating - **[Intel® Virtualization Technology FlexMigration (Intel® VT FlexMigration) Application Note](https://software.intel.com/content/www/us/en/develop/download/intel-virtualization-technology-flexmigration-intel-vt-flexmigration-application-note.html) **- This application note discusses virtualization capabilities in Intel® processors that support Intel® VT FlexMigration which is a part of Intel VT that allows a virtual-machine monitor (VMM) to report a consistent set of available processor features to guest software running in a virtual machine (VM), thereby broadening the live-migration compatibility pool across generations of Intel® processors.
+
+Doc - Updating - **[Intel® Virtualization Technology for Directed I/O Architecture Specification](https://software.intel.com/content/www/us/en/develop/download/intel-virtualization-technology-for-directed-io-architecture-specification.html) **- This document describes the Intel® Virtualization Technology for Directed I/O.
+
 <br>
 
 Paper - 2010 - **[The evolution of an x86 virtual machine monitor](http://course.ece.cmu.edu/~ece845/docs/vmware-evolution.pdf)** - 
