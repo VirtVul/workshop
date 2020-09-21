@@ -2,12 +2,20 @@
 
 <br>
 
-# Virtualization
+# Virtualization & Emulation
 
 <br>
 
 ## Fundamentals
 Paper - 1974 - **[Formal requirements for virtualizable third generation architectures](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.141.4815&rep=rep1&type=pdf)** - Define a set of conditions sufficient for a computer architecture to support system virtualization efficiently, the short version can be viewed on [wikipedia](https://en.wikipedia.org/wiki/Popek_and_Goldberg_virtualization_requirements).
+
+<br>
+
+Paper - 1993 - **[Shade: A Fast Instruction-Set Simulator for Execution Profiling](http://pages.cs.wisc.edu/~remzi/Classes/838/Spring2013/Papers/cmelik93shade.pdf)** - 
+
+<br>
+
+Lecture - Updating - **[EECS 700 - Virtual Machines](http://www.ittc.ku.edu/~kulkarni/teaching/EECS768/index.html)** - 
 
 <br>
 
@@ -29,15 +37,11 @@ Doc - Updating - **[Intel® Virtualization Technology for Directed I/O Architect
 
 <br>
 
-Paper - 2010 - **[The evolution of an x86 virtual machine monitor](http://course.ece.cmu.edu/~ece845/docs/vmware-evolution.pdf)** - 
+Paper - 2006 - **[Vmware: A Comparison of Software and Hardware Techniques for x86 Virtualization](https://www.vmware.com/pdf/asplos235_adams.pdf)** - 
 
-<br>
+Paper - 2010 - **[Vmware: The evolution of an x86 virtual machine monitor](http://course.ece.cmu.edu/~ece845/docs/vmware-evolution.pdf)** - Vmware staff's views on how the x86 architecture was originally virtual- ized in the days of the Pentium II (1998), and follow the evolution of the virtual machine monitor forward through the introduction of virtual SMP, 64 bit (x64), and hard-ware support for virtualization to finish with a contemporary challenge, nested virtualization. Topics include: Virtual Machine Monitor and hypervisor, Dynamic Binary Translation/Adaptive BT, Shadow Page Tables, Segmentation, vSMP, VT, VT-x and AMD-V, Nested Paging, and time measure, record/replay capability with instruction-for-instruction accuracy, NUMA support. Souptik Sen wrote a review:  [The Evolution of an x86 Virtual Machine Monitor: Review](https://souptikji.github.io/blog/2018/04/VM)
 
-Article - 2012 - **[Bringing Virtualization to the x86 Architecture with the Original VMware Workstation](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.423.4009&rep=rep1&type=pdf)** - 
-
-<br>
-
-Paper - 2006 - **[A Comparison of Software and Hardware Techniques for x86 Virtualization](https://www.vmware.com/pdf/asplos235_adams.pdf)** - 
+Article - 2012 - **[Vmware: Bringing Virtualization to the x86 Architecture with the Original VMware Workstation](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.423.4009&rep=rep1&type=pdf)** - 
 
 <br>
 
