@@ -91,6 +91,7 @@ Paper - 2017 - **[Digtool: A Virtualization-Based Framework for Detecting Kernel
 
 # Miscellaneous
 
-Blog - 2017 - **[SecDr](http://secdr.github.io/)** - 
+Blog/Paper/Code - 2017 - **[SecDr](http://secdr.github.io/)** - SecDr 由一群关注信息安全的科研人员组成，主要交流科研写作与生活，侧重于以下几方面内容：论文写作技巧；期刊「SCI，EI」与会议「顶会，普会」的投稿；优质论文阅读与分享；最新安全动向交流。**但该网站目前（2017-2020）一直没有更新。但其公众号“安全学术圈”以及[github](https://github.com/secdr)仓库依然处于活跃状态**
 
+<br>
 
