@@ -6,6 +6,8 @@
 
 <br>
 
+dfdd
+
 ## Fundamentals
 Paper - 1974 - **[Formal requirements for virtualizable third generation architectures](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.141.4815&rep=rep1&type=pdf)** - Define a set of conditions sufficient for a computer architecture to support system virtualization efficiently, the short version can be viewed on [wikipedia](https://en.wikipedia.org/wiki/Popek_and_Goldberg_virtualization_requirements).
 
@@ -53,7 +55,13 @@ Series/Code - Updating - **[Hypervisor-From-Scratch](https://github.com/SinaKarv
 
 <br>
 
+### Memory Monitoring
+
 Doc - 2009 - **[Performance Evaluation of Intel EPT Hardware Assist](https://www.vmware.com/pdf/Perf_ESX_Intel-EPT-eval.pdf)** - Vmware's introduction about **x86** Extended Page Tables (EPT, Intel's implementation of [Second Level Address Translation (SLAT), also known as nested paging](http://en.wikipedia.org/wiki/Second_Level_Address_Translation), which is used to more efficiently virtualize the memory of guest VMs) and shadow page table technique, and they designed a experience to evaluated their performance.
+
+<br>
+
+Article - 2014 - **[Monitor Trap Flag (MTF) Usage in EPT-based Guest Physical Memory Monitoring](http://hypervsir.blogspot.com/2014/11/monitor-trap-flag-mtf-usage-in-ept.html)** - Monitor Trap Flag (MTF) is a flag specifically designed for single-stepping in x86/Intel hardware virtualization VT-x technology. When MTF is set, the guest will trigger a VM Exit after executing each instruction (need to consider NMI or other interrupt delivery boundary). This article reviewed a [paper](https://www.cerias.purdue.edu/assets/pdf/bibtex_archive/2013-5.pdf) which presents an idea to use MTF for memory write allowing when monitoring modification to guest virtual-to-physical mapping (page table entries) tables. 
 
 <br>
 
