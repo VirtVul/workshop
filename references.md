@@ -97,7 +97,7 @@ Paper - 2017 - **[Designing New Operating Primitives to Improve Fuzzing Performa
 
 Doc - Updating - **[libFuzzer – a library for coverage-guided fuzz testing](https://llvm.org/docs/LibFuzzer.html)** - LibFuzzer is in-process, coverage-guided, evolutionary fuzzing engine, a good choice for testing libraries that have relatively small inputs, each input takes < 10ms to run, and the library code is not expected to crash on invalid inputs. This Doc describe the rules and tricks using LibFuzzer in a more theoretical way than the doc below. Topics include:  fuzz targets and their requirements, fuzzer binary usages and flags, Corpus, Parallel Fuzzing, Fork mode (Experimental), Resuming merge, common options, output format, Dictionaries, CMP instructions tracing and value profile (Experimental), `FUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION` build macro, Startup initialization, Libfuzzer as library, when libfuzzer is not a good choice, etc.
 
-Doc - Updating - **[libFuzzer Tutorial by Google](https://github.com/google/fuzzing/blob/master/tutorial/libFuzzerTutorial.md)** - 
+Doc - Updating - **[libFuzzer Tutorial by Google](https://github.com/google/fuzzing/blob/master/tutorial/libFuzzerTutorial.md)** - Practical version of above one. Additions include examples, Competing bugs, Minimizing a reproducer, Visualizing Coverage, Other sanitizers, Distributed Fuzzing, Continuous fuzzing, problems about OOMs, Leaks, Timeouts and Slow inputs.
 
 Doc - Updating - **[Structure-Aware Fuzzing/custom (user-supplied) mutators](https://github.com/google/fuzzing/blob/master/docs/structure-aware-fuzzing.md)** - 
 
