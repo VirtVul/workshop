@@ -128,3 +128,13 @@ void __attribute__((optimize("no-stack-protector"))) shellcode(struct payload *p
 	payload->done = 1;
 ```
 
+<br>
+
+## [Fuzzing Math - miscalculations in OpenSSL's BN_mod_exp (CVE-2015-3193)](https://blog.fuzzing-project.org/31-Fuzzing-Math-miscalculations-in-OpenSSLs-BN_mod_exp-CVE-2015-3193.html)
+
+Fuzzing is usually associated with typical memory corruption bugs. What these examples in this article show is that you can use fuzzing to target entirely different classes of bugs. Essentially fuzz testing can target any kind of bug class that depends on an input and that has a testable failure state.  For mathematics the failure state is pretty obvious: If the result of a calculation is wrong then there is a bug. The author thought there are two basic options to do so:
+
+1. Do a calculation and check it for consistencies. This depends on the calculation you do. An example would be a division function. If you divide a by b, store the result in r and the remainder in s then r*b+s must be a again. 
+2. Do differential testing with two different implementations. You simply take two different bignum libraries, do the same operation and compare the results.
+
+<br>
