@@ -63,6 +63,18 @@ Article - 2014 - **[Monitor Trap Flag (MTF) Usage in EPT-based Guest Physical Me
 
 <br>
 
+## Hypervisor & VMM & Emulator
+
+Doc - Updating - **[Virtualbox Technical documentation](https://www.virtualbox.org/wiki/Technical_documentation)** - 
+
+Doc - Updating - **[Virtualbox Timeline/Changes](https://www.virtualbox.org/timeline?from=09%2F24%2F2020&daysback=15&authors=&changeset=on&update=Update)** - 
+
+Book/Article - 2013 - **[Oracle VM VirtualBox architecture](https://subscription.packtpub.com/book/virtualization_and_cloud/9781782177821/1/ch01lvl1sec14/oracle-vm-virtualbox-architecture)** - 
+
+Book/Article - 2010 - **[Inside Oracle VM VirtualBox](https://www.informit.com/articles/article.aspx?p=1627061)** - 
+
+<br>
+
 # Vulnerability Discovery
 
 <br>
@@ -80,6 +92,22 @@ Paper - 2017 - **[Coverage-based Greybox Fuzzing as Markov Chain](https://mboehm
 Paper - 2017 - **[Designing New Operating Primitives to Improve Fuzzing Performance](https://iisp.gatech.edu/sites/default/files/images/designing_new_operating_primitives_to_improve_fuzzing_performance_vt.pdf)** - 
 
 <br>
+
+## Tools
+
+Doc - Updating - **[libFuzzer – a library for coverage-guided fuzz testing](https://llvm.org/docs/LibFuzzer.html)** - LibFuzzer is in-process, coverage-guided, evolutionary fuzzing engine, a good choice for testing libraries that have relatively small inputs, each input takes < 10ms to run, and the library code is not expected to crash on invalid inputs. This Doc describe the rules and tricks using LibFuzzer in a more theoretical way than the doc below. Topics include:  fuzz targets and their requirements, fuzzer binary usages and flags, Corpus, Parallel Fuzzing, Fork mode (Experimental), Resuming merge, common options, output format, Dictionaries, CMP instructions tracing and value profile (Experimental), `FUZZING_BUILD_MODE_UNSAFE_FOR_PRODUCTION` build macro, Startup initialization, Libfuzzer as library, when libfuzzer is not a good choice, etc.
+
+Doc - Updating - **[libFuzzer Tutorial by Google](https://github.com/google/fuzzing/blob/master/tutorial/libFuzzerTutorial.md)** - 
+
+Doc - Updating - **[Structure-Aware Fuzzing/custom (user-supplied) mutators](https://github.com/google/fuzzing/blob/master/docs/structure-aware-fuzzing.md)** - 
+
+Doc - Updating - **[Clang AddressSanitizer](http://clang.llvm.org/docs/AddressSanitizer.html)** - 
+
+Doc - Updating - **[Clang UndefinedBehaviorSanitizer](https://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html)** - 
+
+Doc - Updating - **[Clang MemorySanitizer (support is experimental)](https://clang.llvm.org/docs/SanitizerCoverage.html#sanitizercoverage)** - 
+
+Doc - Updating - **[Clang SanitizerCoverage](https://clang.llvm.org/docs/SanitizerCoverage.html#sanitizercoverage)** - 
 
 # VirtVul
 
