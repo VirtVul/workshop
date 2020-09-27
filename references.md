@@ -75,6 +75,22 @@ Book/Article - 2010 - **[Inside Oracle VM VirtualBox](https://www.informit.com/a
 
 <br>
 
+Article - 2011 - **[QEMU Internals: Overall architecture and threading model](http://blog.vmsplice.net/2011/03/qemu-internals-overall-architecture-and.html)** - Talk about the hybrid architecture of qemu , which is mainly event-driven, aka a loop in the kernel: `softmmu/main.c:main()->softmmu/vl.c:qemu_init()->util/main-loop.c:qemu_main_loop()->softmmu/vl.c:qemu_cleanup()`. But it can also spawn worker threads which communicate with core qemu by pipe or fd. There is a big mutex in core qemu. Qemu uses signals to break out of the guest when execute guest code. For now qemu use iothread model where it spawns one thread per vCPU.
+
+<br>
+
+Article - 2011 - **[QEMU Internals: Big picture overview](http://blog.vmsplice.net/2011/03/qemu-internals-big-picture-overview.html)**  - 
+
+<br>
+
+Notes - 2014 - **[QEMU Source Code Notes](https://chenyufei.info/notes/qemu-src.html) (kinda broken)** - flow chart about CPU & memory emulation,  softmmu, IRQState, timer, Module inrastructure, IO port emulation, Coroutine in QEMU.
+
+<br>
+
+
+
+ 
+
 # Vulnerability Discovery
 
 <br>
