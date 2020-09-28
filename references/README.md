@@ -65,6 +65,10 @@ Article - 2014 - **[Monitor Trap Flag (MTF) Usage in EPT-based Guest Physical Me
 
 ## Hypervisor & VMM & Emulator
 
+<br>
+
+### VirtualBox
+
 Doc - Updating - **[Virtualbox Technical documentation](https://www.virtualbox.org/wiki/Technical_documentation)** - 
 
 Doc - Updating - **[Virtualbox Timeline/Changes](https://www.virtualbox.org/timeline?from=09%2F24%2F2020&daysback=15&authors=&changeset=on&update=Update)** - 
@@ -75,11 +79,19 @@ Book/Article - 2010 - **[Inside Oracle VM VirtualBox](https://www.informit.com/a
 
 <br>
 
-Article - 2011 - **[QEMU Internals: Overall architecture and threading model](http://blog.vmsplice.net/2011/03/qemu-internals-overall-architecture-and.html)** - Talk about the hybrid architecture of qemu , which is mainly event-driven, aka a loop in the kernel: `softmmu/main.c:main()->softmmu/vl.c:qemu_init()->util/main-loop.c:qemu_main_loop()->softmmu/vl.c:qemu_cleanup()`. But it can also spawn worker threads which communicate with core qemu by pipe or fd. There is a big mutex in core qemu. Qemu uses signals to break out of the guest when execute guest code. For now qemu use iothread model where it spawns one thread per vCPU.
+### QEMU/KVM
+
+Series - 2011 - **[QEMU Internals: Overall architecture and threading model](http://blog.vmsplice.net/2011/03/qemu-internals-overall-architecture-and.html)** /  **[QEMU Internals: Big picture overview](http://blog.vmsplice.net/2011/03/qemu-internals-big-picture-overview.html)**  - Talk about the hybrid architecture of qemu , which is mainly event-driven, aka a loop in the kernel: `softmmu/main.c:main()->softmmu/vl.c:qemu_init()->util/main-loop.c:qemu_main_loop()->softmmu/vl.c:qemu_cleanup()`. But it can also spawn worker threads which communicate with core qemu by pipe or fd. There is a big mutex in core qemu. Qemu uses signals to break out of the guest when execute guest code. For now qemu forks one process per VM, and spawns one thread per vCPU. 
+
+![qemu_thread_per_vcpu_iothread_model](./img/qemu_thread_per_vcpu_iothread_model.png)
+
+**Update Note:  2020 - [QEMU Internals: Event loops](http://blog.vmsplice.net/2020/08/qemu-internals-event-loops.html) QEMU has several different types of threads: The vCPU threads, The main loop that runs the event loops, The IOThreads that run event loops for device emulation concurrently with vCPUs and "out-of-band" QMP monitor commands. vCPU threads do not run an event loop, they can add event sources (File descriptors, Event notifiers/eventfd, Timers, Bottom-halves) to the main loop or IOThread event loops and return back to guest code execution, which let callbacks run in the main loop thread or IOThreads later. The main loop has a glib GMainContext and two AioContext event loops (a single event loop function os_host_main_loop_wait() that calls qemu_poll_ns()). IOThreads have an AioContext and a glib GMainContext. AioContext is QEMU's native event loop API which has better features and performance. Code that relies on the AioContext aio_\*\(\) APIs will work with both the main loop and IOThreads. Older code using qemu_\*\(\) APIs only works with the main loop. Glib code works with both the main loop and IOThreads. The key difference between the main loop and IOThreads is that the main loop uses a traditional event loop that calls `qemu_poll_ns()` while IOThreads use AioContext `aio_poll()`. **
 
 <br>
 
-Article - 2011 - **[QEMU Internals: Big picture overview](http://blog.vmsplice.net/2011/03/qemu-internals-big-picture-overview.html)**  - 
+Series - 2011 - **[QEMU Internals: vhost architecture](http://blog.vmsplice.net/2011/09/qemu-internals-vhost-architecture.html)** - This post explains how vhost provides in-kernel virtio devices for KVM. Normally the QEMU userspace process emulates I/O accesses from the guest. Vhost puts virtio emulation code into the kernel, taking QEMU userspace out of the picture. This allows device emulation code to directly call into kernel subsystems instead of performing system calls from userspace. Vhost is a userspace interface and has no dependency on the KVM kernel module, this blog explained how the kvm model ,vhost thread and qemu communicate by descriptor (eventfd, irqfd, Vring, DMA). In the end, vhost instance only knows about the guest memory mapping, a kick eventfd, and a call eventfd. Keywords: `/dev/vhost-net`, `ioctl(2)`, `vhost-$pid`, `Linux: drivers/vhost/vhost.c, virt/kvm/eventfd.c`, `QEMU: hw/vhost.c`.
+
+![vhost-architecture](./img/vhost-architecture.png)
 
 <br>
 
@@ -87,9 +99,11 @@ Notes - 2014 - **[QEMU Source Code Notes](https://chenyufei.info/notes/qemu-src.
 
 <br>
 
+Slides - 2010  - **[Architecture of the Kernel-based Virtual Machine (KVM)](http://www.linux-kongress.org/2010/slides/KVM-Architecture-LK2010.pdf)** - 
+
+Slides - 2010  - **[KVM Architecture Overview (on Linux x86-64)](https://docs.google.com/present/view?id=ddd4skf9_889dwbvkpc4)** -  
 
 
- 
 
 # Vulnerability Discovery
 
