@@ -145,7 +145,7 @@ Article - 2015 - **[vmware-exploitation](https://github.com/xairy/vmware-exploit
 
 <br>
 
-Article - 2019 - **[Oracle VirtualBox Intel PRO 1000 MT Desktop - Integer Underflow Vulnerability](https://github.com/hongphipham95/Vulnerabilities/blob/master/VirtualBox/Oracle%20VirtualBox%20Intel%20PRO%201000%20MT%20Desktop%20-%20Integer%20Underflow%20Vulnerability/Oracle%20VirtualBox%20Intel%20PRO%201000%20MT%20Desktop%20-%20Integer%20Underflow%20Vulnerability.md)** - 
+Article - 2019 - **[pwn2own-2020-oracle-virtualbox-escape](https://starlabs.sg/blog/2020/09/pwn2own-2020-oracle-virtualbox-escape/)** - (Read recursively)
 
 <br>
 
