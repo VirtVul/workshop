@@ -141,6 +141,10 @@ Doc - Updating - **[Clang SanitizerCoverage](https://clang.llvm.org/docs/Sanitiz
 
 # VirtVul
 
+Article - 2019 - **[Oracle VirtualBox Intel PRO 1000 MT Desktop - Integer Underflow Vulnerability](https://github.com/hongphipham95/Vulnerabilities/blob/master/VirtualBox/Oracle%20VirtualBox%20Intel%20PRO%201000%20MT%20Desktop%20-%20Integer%20Underflow%20Vulnerability/Oracle%20VirtualBox%20Intel%20PRO%201000%20MT%20Desktop%20-%20Integer%20Underflow%20Vulnerability.md)** - 
+
+<br>
+
 Article - 2020 - **[Hunting for bugs in VirtualBox (First Take)](http://blog.paulch.ru/2020-07-26-hunting-for-bugs-in-virtualbox-first-take.html)** - 
 
 <br>
