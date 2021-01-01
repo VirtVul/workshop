@@ -150,7 +150,7 @@ Article - 2019 - **[pwn2own-2020-oracle-virtualbox-escape](https://starlabs.sg/b
 <br>
 
 Article - 2019 - **[Improving Testing and Fuzz Development with Coverage Analysis
-](https://dzone.com/articles/beginning-fuzz-cycle-automation)** - (glossary harness)
+](https://dzone.com/articles/beginning-fuzz-cycle-automation)** - (glossary )
 
 <br>
 
@@ -158,7 +158,7 @@ Article - 2020 - **[Hunting for bugs in VirtualBox (First Take)](http://blog.pau
 
 <br>
 
-Article - 2020 - **[VMware Workstation: Attack surface through Virtual Printer](https://blog.khonggianmang.vn/vmware-workstation-attack-surface-through-virtual-printer/)** - 
+Article - 2020 - **[VMware Workstation: Attack surface through Virtual Printer](https://blog.khonggianmang.vn/vmware-workstation-attack-surface-through-virtual-printer/)** - find bugs on closed source applications using the fuzzing method
 
 <br>
 
