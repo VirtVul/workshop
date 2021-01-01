@@ -153,6 +153,10 @@ Article - 2020 - **[Hunting for bugs in VirtualBox (First Take)](http://blog.pau
 
 <br>
 
+Article - 2020 - **[VMware Workstation: Attack surface through Virtual Printer](https://blog.khonggianmang.vn/vmware-workstation-attack-surface-through-virtual-printer/)** - 
+
+<br>
+
 Paper - 2020 - **[Agamotto: Accelerating Kernel Driver Fuzzing with Lightweight Virtual Machine Checkpoints](https://www.usenix.org/system/files/sec20-song.pdf)** - 
 
 <br>
