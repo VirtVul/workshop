@@ -149,6 +149,11 @@ Article - 2019 - **[pwn2own-2020-oracle-virtualbox-escape](https://starlabs.sg/b
 
 <br>
 
+Article - 2019 - **[Improving Testing and Fuzz Development with Coverage Analysis
+](https://dzone.com/articles/beginning-fuzz-cycle-automation)** - (glossary harness)
+
+<br>
+
 Article - 2020 - **[Hunting for bugs in VirtualBox (First Take)](http://blog.paulch.ru/2020-07-26-hunting-for-bugs-in-virtualbox-first-take.html)** - 
 
 <br>
