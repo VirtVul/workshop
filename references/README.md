@@ -109,6 +109,10 @@ Video - 2014 - **[Towards Multithreaded Device Emulation in QEMU by Stefan Hajno
 
 <br>
 
+Pic - 2013 - [张友加_qemu_kernel](./张友加_qemu_kernel) - 大师在流浪！
+
+<br>
+
 # Vulnerability Discovery
 
 <br>
