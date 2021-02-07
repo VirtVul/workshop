@@ -103,7 +103,11 @@ Slides - 2010  - **[Architecture of the Kernel-based Virtual Machine (KVM)](http
 
 Slides - 2010  - **[KVM Architecture Overview (on Linux x86-64)](https://docs.google.com/present/view?id=ddd4skf9_889dwbvkpc4)** -  
 
+<br>
 
+Video - 2014 - **[Towards Multithreaded Device Emulation in QEMU by Stefan Hajnoczi](https://www.youtube.com/watch?v=KVD9FVlbqmY)** -  virtio-blk device emulation can now run in dedicated threads, called iothreads. These threads can be bound to host CPUs much in the same way that vCPUs can be bound. This makes it possible to achieve better scalability on multicore hosts where QEMU's legacy global mutex presents a bottleneck. This talk covers new thread-friendly infrastructure in QEMU and how it is used in virtio-blk.
+
+<br>
 
 # Vulnerability Discovery
 
@@ -153,7 +157,7 @@ Paper - 2020 - **[USBFuzz: A Framework for Fuzzing USB Drivers by Device Emulati
 
 <br>
 
-Paper - 2017 - **[Digtool: A Virtualization-Based Framework for Detecting Kernel Vulnerabilities](https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-pan.pdf)** - an effective, binary-code-only, kernel vulnerability detection framework, built atop a virtualization monitor designed by 360 guys. Topics include: trace virtual memory with SPT, #PF (clear P flag in PTE), and MTP/TF; Inject interrupt to connect to debugger; monitor scheduling with trace writes to CurrentThread; use CPU Emulator to trace unprivileged cmp instruction to detect UNPROBE; delay free block reallocate time to detect UAF; instert redzone (unallocated block) to object to detect OOB; detect TOCTTOU by in the same syscall context by the length of interval of two memory accesses with same address. There is a Chinese review written by RoarTalk [零日竞赛：Google和360如何改变内核漏洞挖掘领域的规矩？](https://zhuanlan.zhihu.com/p/29641623). Questions include:
+Paper - 2017 - **[Digtool: A Virtualization-Based Framework for Detecting Kernel Vulnerabilities](https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-pan.pdf)** - an effective, binary-code-only, kernel vulnerability detection framework, built atop a virtualization monitor designed by 360 guys. Topics include: trace virtual memory with SPT, #PF (clear P flag in PTE), and MTP/TF; Inject interrupt to connect to debugger; monitor scheduling with trace writes to CurrentThread; use CPU Emulator to trace unprivileged cmp instruction to detect UNPROBE; delay free block reallocate time to detect UAF; instert redzone (unallocated block) to object to detect OOB; detect TOCTTOU by in the same syscall context by the length of interval of two memory accesses with same address. There is a Chinese review written by RoarTalk [零日竞赛：Google和360如何改变内核漏洞挖掘领域的规矩？](https://zhuanlan.zhihu.com/p/29641623). My questions include:
 
 1. in 4.1.1 Virtual Page Monitor: to reduce performance cost, SPTs are only employed for the monitored threads (i.e., the fuzzer
    threads). For non-monitored threads, the original page tables in the guest OS are used. *But won't non-monitored threads corrupt memory of the hypervior since them control the virtual address to machine address process?*
@@ -161,6 +165,9 @@ Paper - 2017 - **[Digtool: A Virtualization-Based Framework for Detecting Kernel
 3. in 4.2.2 Detecting TOCTTOU Vulnerabilities: digtool judge whether two memory access events read the same address are in the same syscall contextby comparing the two events’ times with the Syscall/Trap2b/Trap2e event time and the RetUser event time. *But by this way we may miss some syscalls which can block. So if we can judge by user-space context, such as the cs:ip and ss:sp on stack, maybe we can achieve higher accuracy.*
 4. in 4.3.2 Detecting OOB Vulnerabilities: An OOB vulnerability may be missed in some scenarios. Considering such situations, two memory blocks A and B are allocated and they are adjacent. A brittle program tries to access block A with a pointer and an offset, but the offset is so large that the accessed address locates in block B. This is an obvious OOB vulnerability. However, block B is also in the AVL tree, so it is difficult to detect this error. To solve this problem, Digtool will allocate an extra memory area with M bytes when a hooked memory allocation function is invoked. As a result, the total size of block A is sizeof(A)+M, and the start address of block B will be **backward** for M bytes. *But in this way we may overlook some situations where OOB happens as underflow instead of overflow. For example, a signed integer index overflow will get a negative number. So allocate redzones at both ends of A may be a better choice.* 
 
+<br>
+
+Article - 2017 - **[ VM escape - QEMU Case Study](http://www.phrack.org/papers/vm-escape-qemu-case-study.html)** - 
 
 <br>
 
